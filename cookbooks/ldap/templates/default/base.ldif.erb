@@ -1,0 +1,16 @@
+dn: dc=<%= node["ldap"]["company"] %>,dc=com
+objectClass: top
+objectClass: dcObject
+objectclass: organization
+o: <%= node["ldap"]["company"] %> com
+dc: <%= node["ldap"]["company"] %>
+
+dn: cn=Manager,dc=<%= node["ldap"]["company"] %>,dc=com
+objectClass: organizationalRole
+cn: Manager
+description: Directory Manager
+
+dn: ou=ssh,dc=<%= node["ldap"]["company"] %>,dc=com
+objectClass: organizationalUnit
+ou: ssh 
+

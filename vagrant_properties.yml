@@ -1,0 +1,10 @@
+ldap:
+  hostname: ldap.dev.local
+  ext_ip: 192.168.70.10
+  memory: 512
+  core: 2
+client:
+  hostname: client.dev.local
+  ext_ip: 192.168.70.11
+  memory: 512
+  core: 2

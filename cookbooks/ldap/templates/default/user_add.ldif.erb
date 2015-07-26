@@ -1,0 +1,19 @@
+dn: uid=<%= node["ldap"]["user"] %>,ou=ssh,dc=<%= node["ldap"]["company"] %>,dc=com
+objectClass: shadowAccount
+objectClass: posixAccount
+objectclass: ldapPublicKey
+objectClass: account
+objectClass: top
+cn: <%= node["ldap"]["user"] %>
+uid: <%= node["ldap"]["user"] %>
+uidNumber: 1001
+gidNumber: 1000
+homeDirectory: /home/<%= node["ldap"]["user"] %>
+loginShell: /bin/bash
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+shadowLastChange: 16175
+userPassword: <%= node["ldap"]["user_password"] %>
+description: <%= node["ldap"]["service"] %>
+sshPublicKey: <%= node["ldap"]["user_pubkey"] %>

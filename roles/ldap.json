@@ -1,0 +1,13 @@
+{
+  "name": "ldap",
+  "description": "ldap server",
+  "json_class": "Chef::Role",
+  "override_attributes": {
+    "ldap": {
+      "user_pubkey": "your ssh public key"
+    }
+  },
+  "run_list": [
+    "recipe[ldap]"
+  ]
+}
